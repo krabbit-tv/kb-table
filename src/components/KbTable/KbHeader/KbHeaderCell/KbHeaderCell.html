@@ -1,0 +1,22 @@
+<div class="kb-table__cell kb-table__cell--header" :class="{'kb-table__cell--active': header.key===currentOrder.column}" @click=orderBy>
+    <div class="kb_table__header-name">{{ header.name }}</div>
+    <div class="kb_table__header-icon">
+        <span v-if="currentOrder.column===header.key">
+            <span v-if="currentOrder.direction === 'desc'">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+                    <path d="M13.148 10.398l-1.297 1.289q-0.148 0.148-0.352 0.148t-0.352-0.148l-4.148-4.148-4.148 4.148q-0.148 0.148-0.352 0.148t-0.352-0.148l-1.297-1.289q-0.148-0.148-0.148-0.355t0.148-0.355l5.797-5.789q0.148-0.148 0.352-0.148t0.352 0.148l5.797 5.789q0.148 0.148 0.148 0.355t-0.148 0.355z"></path>
+                </svg>
+            </span>
+            <span v-else>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+                    <path d="M13.148 6.312l-5.797 5.789q-0.148 0.148-0.352 0.148t-0.352-0.148l-5.797-5.789q-0.148-0.148-0.148-0.355t0.148-0.355l1.297-1.289q0.148-0.148 0.352-0.148t0.352 0.148l4.148 4.148 4.148-4.148q0.148-0.148 0.352-0.148t0.352 0.148l1.297 1.289q0.148 0.148 0.148 0.355t-0.148 0.355z"></path>
+                </svg>
+            </span>
+        </span>
+        <span v-else>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="14" viewBox="0 0 12 14">
+                <path d="M6 2.75q-1.156 0-2.133 0.57t-1.547 1.547-0.57 2.133 0.57 2.133 1.547 1.547 2.133 0.57 2.133-0.57 1.547-1.547 0.57-2.133-0.57-2.133-1.547-1.547-2.133-0.57zM12 7q0 1.633-0.805 3.012t-2.184 2.184-3.012 0.805-3.012-0.805-2.184-2.184-0.805-3.012 0.805-3.012 2.184-2.184 3.012-0.805 3.012 0.805 2.184 2.184 0.805 3.012z"></path>
+            </svg>
+        </span>
+    </div>
+</div>

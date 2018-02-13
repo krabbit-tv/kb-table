@@ -1,0 +1,5 @@
+.kb-table__cell {
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
+    flex: 1 1 0;
+}

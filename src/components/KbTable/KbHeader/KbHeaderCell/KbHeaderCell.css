@@ -1,0 +1,13 @@
+.kb-table__cell--header {
+    border-top: solid 1px black;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 5pt;
+}
+
+.kb-table__cell--header.kb-table__cell--active {
+    background-color: #FAFAFA;
+}

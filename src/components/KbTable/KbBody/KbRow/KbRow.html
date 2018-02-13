@@ -1,0 +1,3 @@
+<div class="kb-table__row" :class="{ 'kb-table__row--selected': isSelected }" @click=selectRow>
+    <kb-cell v-for="cell in columns" :key=cell.value :cell=cell></kb-cell>
+</div>

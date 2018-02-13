@@ -1,0 +1,11 @@
+.kb-table__row .kb-table__cell:nth-child(1) {
+    border-left: solid 1px black;
+}
+
+.kb-table__row {
+    cursor: pointer;
+}
+
+.kb-table__row--selected {
+    background-color: #FAFAFA;
+}
