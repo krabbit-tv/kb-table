@@ -38,8 +38,7 @@ export default {
     },
     computed: {
         dataSet() {
-            var filteredData = this.filterData();
-            return filteredData;
+            return this.filterData();
         }
     },
     methods: {
@@ -61,9 +60,13 @@ export default {
             return _.filter(this.orderData(), this.searchText);
         },
         searchText (item) {
-            return !!_.find(this.headers, (function (header) {
-                return _.includes(_.upperCase(_.toString(item[header.key])), _.upperCase(this.filter));
+            var rowSeeked = _.find(this.headers, (function (header) {
+                let itemValueStandarizated = _.upperCase(_.toString(item[header.key]));
+                let filterStandarizated = _.upperCase(this.filter);
+                return _.includes(itemValueStandarizated, filterStandarizated);
             }).bind(this));
+
+            return rowSeeked !== undefined;
         }
     },
     created() {
